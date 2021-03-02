@@ -1,0 +1,12 @@
+.App {
+    width:30%;
+    margin: 30px auto;
+    padding: 30px;
+}
+.my-todo-app{
+    background-color:whitesmoke;
+    text-align: center;
+    padding:20px;
+    border-top-right-radius: 25px;
+    border-top-left-radius:25px ;
+}

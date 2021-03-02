@@ -7,8 +7,8 @@ const app = express();
 const router = require("./routes/crud");
 
 app.use(bodyParser.json());
-app.use("/todos", router);
 app.use(cors());
+app.use("/todos", router);
 
 const PORT = process.env.PORT || 5000;
 require("dotenv").config();
