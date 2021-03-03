@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TodoCard from "./TodoCard";
 
-function TodoList() {
-  const [todos, setTodos] = useState([]);
+function TodoList({ todos, setTodos }) {
   useEffect(() => {
     axios
       .get("http://localhost:5000/todos")

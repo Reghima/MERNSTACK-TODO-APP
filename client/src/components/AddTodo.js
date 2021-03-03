@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import "./AddTodo.css";
 
-function AddTodo() {
+function AddTodo({ setTodos }) {
   const [title, setTitle] = useState("");
 
   const onChangeTodo = (e) => {
@@ -16,6 +16,7 @@ function AddTodo() {
     const newTodo = { title: title };
     axios.post("http://localhost:5000/todos", newTodo);
     console.log(newTodo);
+    setTodos((oldState) => [...oldState, newTodo]);
     setTitle("");
   };
 
